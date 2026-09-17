@@ -1,0 +1,37 @@
+{
+  "name": "synergy-ai-workflows",
+  "version": "0.1.0",
+  "description": "Production-grade AI-assisted workflows for on-chain investigation (subnets, validators): model integration with evals, guardrails, observability, cost controls and runbooks.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/src/server.js",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "eval": "tsx evals/run.ts",
+    "eval:live": "LLM_PROVIDER=anthropic tsx evals/run.ts",
+    "eval:update-baseline": "tsx evals/run.ts --update-baseline",
+    "demo": "tsx scripts/demo.ts",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run eval"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/node": "^22.5.0",
+    "eslint": "^9.9.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.3.0",
+    "vitest": "^2.0.5"
+  }
+}
