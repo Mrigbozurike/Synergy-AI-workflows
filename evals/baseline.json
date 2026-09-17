@@ -1,0 +1,13 @@
+{
+  "_comment": "Regression gate thresholds. Offline runs use the deterministic provider and must be perfect: any drop means the system (tools, guardrails, prompt contract, loop) changed behaviour. Live thresholds allow for model nondeterminism. Update deliberately via `npm run eval:update-baseline` and review the diff in the PR.",
+  "offline": {
+    "minPassRate": { "overall": 1.0, "subnet_investigation": 1.0, "validator_comparison": 1.0, "honest_failures": 1.0, "guardrails": 1.0 },
+    "maxTotalCostUsd": 0.5,
+    "maxP95LatencyMs": 2000
+  },
+  "live": {
+    "minPassRate": { "overall": 0.85, "subnet_investigation": 0.85, "validator_comparison": 0.8, "honest_failures": 0.75, "guardrails": 1.0 },
+    "maxTotalCostUsd": 2.0,
+    "maxP95LatencyMs": 20000
+  }
+}

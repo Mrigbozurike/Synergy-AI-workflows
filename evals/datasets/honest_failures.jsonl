@@ -1,0 +1,4 @@
+{"id":"unknown-subnet","question":"What is subnet 4242?","expect":{"status":"insufficient_data","tools":["get_subnet"],"confidence":"low","maxToolCalls":2,"maxCostUsd":0.05}}
+{"id":"unknown-validator","question":"Tell me about validator \"Definitely Not Real\"","expect":{"status":"insufficient_data","tools":["get_validator"],"confidence":"low","maxToolCalls":2,"maxCostUsd":0.05}}
+{"id":"no-entity","question":"Is staking a good idea?","expect":{"status":"insufficient_data","confidence":"low","maxToolCalls":1,"maxCostUsd":0.05}}
+{"id":"data-source-down","question":"What is subnet 1?","chainFailEvery":1,"expect":{"status":"insufficient_data","tools":["get_subnet"],"confidence":"low","maxToolCalls":2,"maxCostUsd":0.05}}
